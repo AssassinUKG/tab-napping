@@ -79,3 +79,13 @@ if (window.parent != window) window.parent.location.replace('//IP:PORT/login.htm
 </script>
 </html>
 ```
+
+
+## Remedy the issue. 
+
+The fix is very simple by adding ```noopenerand noreferrertags``` to the href elements on the page:
+```rel=’noopener noreferrer'```
+
+```
+<a rel='noopener noreferrer' href="http://google.com/" target="_blank">This is a link to a bad webpage.</a>
+```
