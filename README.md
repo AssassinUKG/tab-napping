@@ -8,6 +8,7 @@ https://hackerone.com/reports/179568
 ## Desc
 
 When you open a link in a new tab ( ```target="_blank"``` ), the page that opens in a new tab can access the initial tab and change it's location using the window.opener property. 
+This is to serve malware or other phishing attack
 
 ## Tab napping (manual) 
 
