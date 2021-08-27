@@ -69,13 +69,13 @@ You need 2 html forms.
 
 ```
 
-2. Redirect index.html
+2. Redirect index.html (replace your IP:PORT)
 
 ```
 <html>
 <script>
-if (window.opener) window.opener.parent.location.replace('//10.10.14.148:8088/login.html');
-if (window.parent != window) window.parent.location.replace('//10.10.14.148:8088/login.html');
+if (window.opener) window.opener.parent.location.replace('//IP:PORT/login.html');
+if (window.parent != window) window.parent.location.replace('//IP:PORT/login.html');
 </script>
 </html>
 ```
